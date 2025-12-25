@@ -34,4 +34,11 @@ public class CalculatorServiceTests
         var result = _calculator.Multiply(7, 8);
         Assert.Equal(56, result);
     }
+
+    [Fact]
+    public void Factorial_OfFive_Returns120()
+    {
+        var result = _calculator.Factorial(5);
+        Assert.Equal(121, result);
+    }
 }
