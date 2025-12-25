@@ -27,5 +27,20 @@ namespace Calculator
         {
             return a * b;
         }
+
+        public int Factorial(int n)
+        {
+            if (n < 0)
+                throw new ArgumentException("n must be >= 0");
+
+            int result = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+
+            return result;
+        }
     }
 }
