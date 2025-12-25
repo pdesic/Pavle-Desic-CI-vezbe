@@ -17,7 +17,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "9.0.x"
+          dotnet-version: "8.0.x"
 
       - name: Restore
         run: dotnet restore
@@ -36,10 +36,18 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "9.0.x"
+          dotnet-version: "8.0.x"
 
       - name: Restore
         run: dotnet restore
 
       - name: Test
-        run: dotnet test --no-build -c Release
+        run: dotnet test -c Release
+
+  dotnet-info:
+    name: Dotnet Info (Windows)
+    runs-on: windows-latest
+
+    steps:
+      - name: Print dotnet info
+        run: dotnet --info
