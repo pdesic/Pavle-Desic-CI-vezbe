@@ -39,6 +39,6 @@ public class CalculatorServiceTests
     public void Factorial_OfFive_Returns120()
     {
         var result = _calculator.Factorial(5);
-        Assert.Equal(121, result);
+        Assert.Equal(120, result);
     }
 }
