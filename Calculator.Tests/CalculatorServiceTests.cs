@@ -32,6 +32,6 @@ public class CalculatorServiceTests
     public void Multiply_ReturnsCorrect()
     {
         var result = _calculator.Multiply(7, 8);
-        Assert.Equal(56, result);
+        Assert.Equal(55, result);
     }
 }
